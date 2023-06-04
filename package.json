@@ -1,11 +1,10 @@
 {
-  "name": "coffeetools",
-  "version": "0.0.0-beta1",
+  "name": "coffee-compile",
+  "version": "1.0.0",
   "description": "Execute or compile coffeescript with node hashbang",
-  "main": "index.js",
   "bin": {
-	  "cfc": "cfc.js",
-	  "cfe": "cfe.js"
+    "cfc": "cfc.js",
+    "cfe": "cfe.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/viridian035/CoffeeTools/issues"
   },
-  "homepage": "https://github.com/viridian035/CoffeeTools#readme"
+  "homepage": "https://github.com/viridian035/CoffeeTools#readme",
+  "dependencies": {
+    "coffee-standards": "^1.0.0"
+  }
 }
