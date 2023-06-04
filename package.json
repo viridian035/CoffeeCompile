@@ -1,0 +1,23 @@
+{
+  "name": "coffeetools",
+  "version": "0.0.0-beta1",
+  "description": "Execute or compile coffeescript with node hashbang",
+  "main": "index.js",
+  "bin": {
+	  "cfc": "cfc.js",
+	  "cfe": "cfe.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viridian035/CoffeeTools.git"
+  },
+  "author": "viridian035",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viridian035/CoffeeTools/issues"
+  },
+  "homepage": "https://github.com/viridian035/CoffeeTools#readme"
+}
