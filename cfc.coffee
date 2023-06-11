@@ -1,18 +1,20 @@
 { FCHK, FIN, FOUT, EXEC } = require 'coffee-standards'
 
-filename = process.argv[2]
-rawname = filename.replace /\.coffee$/, ''
+filenames = process.argv[2..]
 
-unless FCHK filename
-	throw 'file not found'
-
-EXEC "coffee -c #{rawname}.coffee"
-
-code = FIN "#{rawname}.js"
-newCode =
-	"""
-	#!/usr/bin/env node
+for filename in filenames
+	rawname = filename.replace /\.coffee$/, ''
 	
-	#{code}
-	"""
-FOUT "#{rawname}.js", newCode
+	unless FCHK filename
+		throw 'file not found'
+	
+	EXEC "coffee -c #{rawname}.coffee"
+	
+	code = FIN "#{rawname}.js"
+	newCode =
+		"""
+		#!/usr/bin/env node
+		
+		#{code}
+		"""
+	FOUT "#{rawname}.js", newCode
